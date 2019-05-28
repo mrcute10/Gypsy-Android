@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gypsyColor5"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:keepScreenOn="true"
+    tools:context=".FaceTrackerActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/passBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backsync">
+        <Button
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/sdk_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <ToggleButton
+            app:layout_constraintTop_toBottomOf="@id/sdk_start_button"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/front_back_toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_above="@id/sdk_start_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:textOff="FRONT"
+            android:textOn="BACK" />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/front_back_toggle_button"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/surfaceview_visibility_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/smile_textview"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/age_textview"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smile_textview"
+            android:layout_margin="16dp"
+            tools:text="age" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/age_textview"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/ethnicity_textview"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender_textview"
+            android:layout_margin="16dp"
+            tools:text="ethnicity" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/ethnicity_textview"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/gender_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/age_textview"
+            android:visibility="gone"
+            android:layout_margin="16dp"
+            tools:text="gender" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/faceBack"/>
+        <TextView
+            android:id="@+id/textTalk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:shadowColor="@color/gypsyColor1"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text=" "
+            android:textAlignment="center"
+            android:textColor="@color/gypsyColor5"
+            android:textSize="100dp"
+            app:fontFamily="@font/gobook" />
+
+        <ImageView
+            android:id="@+id/logoMid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/gypsyicon" />
+
+        <VideoView
+            android:id="@+id/genAdsVideo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+            <!--app:layout_constraintBottom_toTopOf="@id/dataInsertLayout"-->
+
+        <ImageView
+            android:id="@+id/genAdsImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="200dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundbutton"
+            android:clickable="false"
+            android:rating="100"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toTopOf="@+id/dataInsertLayout"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/qrcodeImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/gypsyColor2"
+            app:layout_constraintBottom_toBottomOf="@+id/logoMid"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/gypsySmallIcon3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/gypsyicon"
+
+            tools:ignore="MissingConstraints" />
+            <!--app:layout_constraintBottom_toTopOf="@id/dataInsertLayout"-->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dataInsertLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/grad4"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/novareg"
+                android:shadowColor="@color/gypsyColor2"
+                android:text="Get an offer now"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/highAge"
+                app:layout_constraintLeft_toLeftOf="@id/dataInsertLayout"
+                app:layout_constraintRight_toRightOf="@id/dataInsertLayout" />
+
+            <TextView
+                android:id="@+id/ageT1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/novareg"
+                android:text="Age :"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/genderT1"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/genderT1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/novareg"
+                android:text="Gender :"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                />
+
+            <ImageView
+                android:id="@+id/gypsySmallIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/genderT1"
+                app:layout_constraintLeft_toLeftOf="@id/dataInsertLayout"
+                app:layout_constraintRight_toRightOf="@id/dataInsertLayout"
+                app:layout_constraintTop_toBottomOf="@+id/offer"
+                app:srcCompat="@drawable/gypsyicon"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/maleB2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/gomedium"
+                android:text="M"
+                android:textColor="@color/gypsyColor5"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/genderT1"
+                app:layout_constraintLeft_toRightOf="@id/genderT1"
+                app:layout_constraintRight_toLeftOf="@id/femaleB2"
+                app:layout_constraintTop_toTopOf="@id/genderT1" />
+
+            <Button
+                android:id="@+id/femaleB2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/gomedium"
+                android:text="F"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/maleB2"
+                app:layout_constraintLeft_toRightOf="@id/maleB2"
+                app:layout_constraintRight_toRightOf="@id/highAge"
+                app:layout_constraintTop_toTopOf="@id/genderT1" />
+
+            <Button
+                android:id="@+id/lowAge"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/roundbutton"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/ageT1"
+                app:layout_constraintLeft_toRightOf="@id/ageT1"
+                app:layout_constraintRight_toLeftOf="@id/ageOut2"
+                app:layout_constraintTop_toTopOf="@id/ageT1" />
+
+            <Button
+                android:id="@+id/highAge"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundbutton"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/lowAge"
+                app:layout_constraintLeft_toRightOf="@id/ageOut2"
+                app:layout_constraintRight_toLeftOf="@id/gypsySmallIcon"
+                app:layout_constraintTop_toTopOf="@id/lowAge" />
+
+            <TextView
+                android:id="@+id/ageOut2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/roundbuttonoff"
+                android:fontFamily="@font/gomedium"
+                android:gravity="center"
+                android:text="18"
+                android:textColor="@color/gypsyColor3"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/lowAge"
+                app:layout_constraintLeft_toRightOf="@id/lowAge"
+                app:layout_constraintRight_toLeftOf="@id/highAge"
+                app:layout_constraintTop_toTopOf="@id/lowAge" />
+
+            <EditText
+                android:id="@+id/emailB3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/novareg"
+                android:gravity="center"
+                android:hint="Enter your Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/gypsyColor2"
+                android:textColorHint="@color/gypsyColor2"
+                android:textSize="24sp"
+                android:theme="@style/GypsyColorStyle"
+                app:layout_constraintBottom_toTopOf="@+id/signUp"
+
+                app:layout_constraintEnd_toEndOf="@id/signUp"
+                app:layout_constraintStart_toStartOf="@id/signUp" />
+
+            <Button
+                android:id="@+id/signUp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/novareg"
+                android:text="Sign Up"
+                android:textColor="@color/gypsyColor2"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/maleB2"
+                app:layout_constraintLeft_toRightOf="@id/gypsySmallIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/femaleB2" />
+
+
+        </android.support.constraint.ConstraintLayout>
+        <!--passenonthego2-->
+        <VideoView
+            android:id="@+id/adsVideoPlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/adsImagePlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gypsyicon2" />
+
+        <ImageView
+            android:id="@+id/thankyoubackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backsync"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/thankyou"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gomedium"
+            android:gravity="center"
+            android:shadowColor="@color/gypsyColor1"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text="Thank you"
+            android:textAlignment="center"
+            android:textColor="@color/gypsyColor2"
+            android:textSize="100dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/endTripB"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbutton"
+            android:text="  End your trip  "
+            android:textColor="@color/gypsyColor2"
+            android:textSize="30dp"
+            app:fontFamily="@font/gobook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/gypsySmallIcon2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoMid"
+            app:srcCompat="@drawable/gypsyicon"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/regularDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="50dp"
+            android:visibility="invisible"
+            android:fontFamily="@font/gomedium"
+            android:text="12/12/12"
+            android:textColor="@color/gypsyColor2"
+            android:textSize="35dp"
+            app:layout_constraintRight_toLeftOf="@id/regularTime"
+            app:layout_constraintTop_toTopOf="@id/regularTime"
+            app:layout_constraintBottom_toBottomOf="@id/regularTime"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/regularTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="100dp"
+            android:fontFamily="@font/gomedium"
+            android:text="12:00"
+            android:textColor="@color/gypsyColor2"
+            android:textSize="35dp"
+            app:layout_constraintTop_toTopOf="@id/gypsySmallIcon2"
+            app:layout_constraintBottom_toBottomOf="@id/gypsySmallIcon2"
+            app:layout_constraintRight_toLeftOf="@id/gypsySmallIcon2" />
+
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbutton"
+            android:clickable="false"
+            android:rating="100"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/gypsySmallIcon2" />
+
+
+        <!--passen-->
+
+    </android.support.constraint.ConstraintLayout>
+    <TextView
+        android:visibility="invisible"
+        android:text="F"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/smile_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        />
+    <TextView
+        android:text="G"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/smile_textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/smile_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        />
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/batteryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/detectionF"
+        android:visibility="visible"
+        android:textStyle="bold"/>
+
+<WebView
+        android:id="@+id/webView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</android.support.constraint.ConstraintLayout>
+

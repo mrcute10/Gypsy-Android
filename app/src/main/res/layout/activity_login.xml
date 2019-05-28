@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/gradLoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backsync"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/gypsyIcon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20px"
+        android:layout_weight="1"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gypsyicon" />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/usernameB"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="200px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textColor="@color/gypsyColor2"
+        android:textColorHint="@color/gypsyColor4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:theme="@style/GypsyColorStyle"
+        app:fontFamily="@font/novareg"
+        app:layout_constraintBottom_toTopOf="@+id/passwordB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gypsyIcon" />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/passwordB"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="200px"
+        android:layout_marginVertical="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@color/gypsyColor2"
+        android:textColorHint="@color/gypsyColor4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:theme="@style/GypsyColorStyle"
+        app:fontFamily="@font/novareg"
+        app:layout_constraintBottom_toTopOf="@+id/rememberMe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameB" />
+
+    <LinearLayout
+        android:id="@+id/Login_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="200px"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/updateBe"
+        app:layout_constraintDimensionRatio="16:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        >
+
+        <Button
+            android:id="@+id/loginB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20px"
+            android:layout_weight="1"
+            android:background="@drawable/roundbutton"
+            android:shape="oval"
+            android:text="LOGIN"
+            android:textColor="@color/gypsyColor2"
+            app:autoSizeMaxTextSize="40sp"
+            app:autoSizeStepGranularity="15sp"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="@font/gomedium" />
+
+        <Button
+            android:id="@+id/cancelB"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/roundbutton"
+            android:text="EXIT"
+            android:textColor="@color/gypsyColor2"
+            app:autoSizeMaxTextSize="40sp"
+            app:autoSizeStepGranularity="15sp"
+            app:autoSizeTextType="uniform"
+            app:fontFamily="@font/gomedium"
+
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateBe"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="200px"
+        android:layout_marginBottom="50px"
+        android:layout_weight="1"
+        android:background="@drawable/roundbutton"
+        android:shape="oval"
+        android:text="Check for updates"
+        android:textColor="@color/gypsyColor2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginTop="40dp" />
+
+    <TextView
+        android:id="@+id/batteryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:textSize="20sp"
+        app:autoSizeMaxTextSize="36sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="@font/gomedium"
+        app:layout_constraintBottom_toTopOf="@id/Login_cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

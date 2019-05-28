@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="css/ghpages-materialize.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
+    	<script src="js/materialize.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body class="purple darken-4">
+    	
+	<div class="container center-align">
+	<br>
+		<h4  class="white-text">GYPSY SURVEY</h4>
+			<form method="post">
+				<div class="row">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="data1" type="text" name="value" class="validate white-text">
+							<label for="user" class="white-text">Enter data1</label>
+							<span class="helper-text" data-error="Unknown input" data-success="Success"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="data2" type="text" name="value" class="validate white-text">
+							<label for="user" class="white-text">Enter data2</label>
+							<span class="helper-text" data-error="Unknown input" data-success="Success"></span>
+						</div>
+					</div>
+					<div class ="col s12 center-align">
+						<button type="submit"  onclick="dataPress()" name="typeGet" value="exit" class="btn waves-effect waves-light center-align indigo darken-4">Submit</button>
+					</div>
+				</div>
+			</form>
+	</div>
+
+	<script
+		src="js/jquery-3.3.1.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">		
+	</script>
+	<script src="js/materialize.js"></script>
+	<script>
+		function dataPress() {
+		var x = document.getElementById("data1").value;
+		   	Android.sendData(x);
+		}
+	</script>
+
+    </body>
+</html>
+        

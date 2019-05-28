@@ -1,0 +1,16 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/animation"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/backsync"
+        android:duration="30000" />
+    <item
+        android:drawable="@drawable/backsync2"
+        android:duration="30000" />
+    <item
+        android:drawable="@drawable/backsync5"
+        android:duration="30000" />
+    <item
+        android:drawable="@drawable/backsync6"
+        android:duration="30000" />
+</animation-list>

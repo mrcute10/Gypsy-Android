@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gradExitActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backsync"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="0.3in"
+
+    tools:context=".exit_activityS">
+
+    <ImageView
+        android:layout_marginTop="50px"
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_weight="1"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gypsyicon" />
+
+
+    <EditText
+        android:id="@+id/passwordBe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="center"
+        android:theme="@style/GypsyColorStyle"
+        android:hint="Enter your password to exit"
+        android:inputType="textPassword"
+        android:textColor="@color/gypsyColor2"
+        android:textColorHint="@color/gypsyColor4"
+        android:autoSizeMaxTextSize="36sp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exitBe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20px"
+            android:layout_weight="1"
+            android:background="@drawable/roundbutton"
+            android:shape="oval"
+            android:text="Exit"
+            android:textColor="@color/gypsyColor2"
+            android:autoSizeMaxTextSize="36sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/returnBe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/roundbutton"
+            android:text="Return"
+            android:textColor="@color/gypsyColor2"
+            android:autoSizeMaxTextSize="36sp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

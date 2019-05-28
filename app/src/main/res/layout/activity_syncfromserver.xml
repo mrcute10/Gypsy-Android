@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/syncServer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backsync"
+
+    tools:context=".syncfromserver">
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_marginTop="50px"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/gypsyicon" />
+
+    <TextView
+        android:id="@+id/syncStatus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="DOWNLOAD"
+        android:textColor="@color/gypsyColor2"
+        android:textSize="24sp"
+        app:fontFamily="@font/gomedium"
+        app:layout_constraintBottom_toTopOf="@id/loading_indicator2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loading_indicator2"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:theme="@style/GypsyColorStyle"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+
+</android.support.constraint.ConstraintLayout>
